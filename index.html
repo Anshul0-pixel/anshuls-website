@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anshul's Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Opening Animation -->
+    <div id="intro">
+        <div id="introText"></div>
+    </div>
+
+    <!-- Main Website -->
+    <div id="mainWebsite">
+
+        <div class="container">
+
+        
+
+        <header>
+            <h1>🌐 Anshul's Website</h1>
+            <p>Save and organize your useful websites</p>
+
+            <div class="top-bar">
+                <div id="websiteCounter">0 websites saved</div>
+
+                <button id="darkModeBtn" onclick="toggleDarkMode()">
+                    🌙 Dark Mode
+                </button>
+            </div>
+        </header>
+
+
+        <!-- Add Website -->
+
+        <div class="form">
+
+            <input
+                type="text"
+                id="websiteName"
+                placeholder="Website name"
+            >
+
+            <input
+                type="url"
+                id="websiteURL"
+                placeholder="Website URL (https://...)"
+            >
+
+            <input
+                type="text"
+                id="websitePurpose"
+                placeholder="What is this website for?"
+            >
+
+            <!-- Category -->
+
+            <select id="websiteCategory">
+
+                <option value="Study">📚 Study</option>
+
+                <option value="Entertainment">🎬 Entertainment</option>
+
+                <option value="Tools">🛠️ Tools</option>
+
+                <option value="Social Media">📱 Social Media</option>
+
+                <option value="Work">💻 Work</option>
+
+                <option value="Other">🌐 Other</option>
+
+            </select>
+
+
+            <button onclick="addWebsite()">
+                ➕ Add Website
+            </button>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <input
+            type="text"
+            id="search"
+            class="search"
+            placeholder="🔎 Search your websites..."
+            oninput="displayWebsites()"
+        >
+
+
+        <!-- Category Filter -->
+
+        <select
+            id="categoryFilter"
+            class="category-filter"
+            onchange="displayWebsites()"
+        >
+
+            <option value="All">📂 All Categories</option>
+
+            <option value="Study">📚 Study</option>
+
+            <option value="Entertainment">🎬 Entertainment</option>
+
+            <option value="Tools">🛠️ Tools</option>
+
+            <option value="Social Media">📱 Social Media</option>
+
+            <option value="Work">💻 Work</option>
+
+            <option value="Other">🌐 Other</option>
+
+        </select>
+
+
+        <!-- Website List -->
+
+        <div id="websiteList"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
